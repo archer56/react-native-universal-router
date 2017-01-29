@@ -1,0 +1,19 @@
+{
+  "name": "react-native-universal-router",
+  "version": "0.0.1",
+  "description": "React-Native router for Ios, Android and UWP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/archer56/react-native-universal-router.git"
+  },
+  "author": "Ben Archer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/archer56/react-native-universal-router/issues"
+  },
+  "homepage": "https://github.com/archer56/react-native-universal-router#readme"
+}
