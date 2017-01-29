@@ -7,4 +7,10 @@
  *
  */
 
-var Test = require('./build/test');
+import Router from './src/router.component';
+import Route from './src/route.component';
+
+export {
+    Router,
+    Route
+}
