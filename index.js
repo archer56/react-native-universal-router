@@ -7,3 +7,4 @@
  *
  */
 
+var Test = require('./build/test');
