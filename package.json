@@ -1,6 +1,6 @@
 {
   "name": "react-native-universal-router",
-  "version": "0.0.1-alpha.1",
+  "version": "0.0.1-alpha.2",
   "description": "React-Native router for Ios, Android and UWP",
   "main": "./index.js",
   "scripts": {
