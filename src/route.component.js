@@ -8,21 +8,19 @@
  */
 
 import React, { PureComponent, PropTypes } from 'react';
-import {
-    Text,
-    View
-} from 'react-native';
+import {View} from 'react-native';
 
 export default class Route extends PureComponent{
     render() {
         return (
-            <Text>
-                {this.props.path}
-            </Text>
+            <View>
+                <this.props.component />
+            </View>
         )
     }
 }
 
 Route.propTypes = {
-    path: PropTypes.string.isRequired
+    path: PropTypes.string.isRequired,
+    component: PropTypes.func.isRequired
 };

@@ -7,22 +7,19 @@
  *
  */
 
-import React, {PureComponent, PropTypes, Children} from 'react';
-import {
-    Text,
-    View
-} from 'react-native';
+import React, { PureComponent, PropTypes, Children } from 'react';
+import {View} from 'react-native';
 
-export default class Router extends PureComponent {
+export default class Router extends PureComponent{
     getChildToRender(path) {
         const children = Children.map(this.props.children, child => {
-            if (child.props.path === path)
+            if(child.props.path === path)
                 return child;
         });
         return children[0]
     }
 
-    get route() {
+    get route(){
         const {history = []} = this.props;
         return history.length > 0 ? history[history.length - 1] : false;
     }
