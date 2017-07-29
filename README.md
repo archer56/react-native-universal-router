@@ -27,16 +27,12 @@ import { Router, Route } from 'react-native-universal-router';
         Route
     } from 'react-native-universal-router';
 
-    const routerHistory = [
-        '/'
-    ]
-
     export class App extends PureComponent {
         render() {
             return (
-                <Router history={routerHistory}>
-                    <Route path="/" component={InitialPage} />
-                    <Route path="/about" component={AboutPage} />
+                <Router initialRoute={'/'}>
+                    <Route path="/" routeComponent={InitialPage} />
+                    <Route path="/about" routeComponent={AboutPage} />
                 </Router>
             )
         }
@@ -44,23 +40,21 @@ import { Router, Route } from 'react-native-universal-router';
 ```
 ## How it works
 ##### History
-routerHistory is an array of the history of the page, this needs to be populated with one route at the start. This acts at the initial route of the app.
-
-Ideally in the case of Redux this should be kept in the store and passed down to App as a prop.
+A prop called routerActions is passed into the routeComponent.
 
 Should you want to go to the next page simply:
 ```js
-   routerHistory.push('/about');
+   routeComponent.goToRoute('/about');
 ```
 This will redirect users to the about page.
 Likewise:
 ```js
-   routerHistory.pop();
+   routeComponent.goBack();
 ```
-Will redirect users back one page to the initialPage.
+Will redirect users back one page.
 
 ##### Routes
-First you need to add the router component, this just takes one prop. The history array that you just created.
+First you need to add the router component, this just takes one prop. The initialRoute as a string.
 
 Next each route is defined as a component that takes two props.
 
@@ -73,13 +67,7 @@ The second prop is the component, this should normally be a page wide component 
 Before this library get's taken out of alpha/beta:
  - It will be fully tested.
  - It will have a default path such as '*'.
- - It will have nesting, so you can have routes such as:
- ```js
-        <Route path="/about" component={AboutPage}>
-            <Route path="/about/me" component={AboutMePage}></Route>
-        </Route>
- ```
  - It will pass the path and any query params down to the page as props.
- - It will be spiking the use of animations when changing pages.
+ - It will be adding animations when changing pages, so the new page will slide in.
 
 If there are any feature requests that could be implemented into this library, please raise them as [github](https://github.com/archer56/react-native-universal-router) issues
