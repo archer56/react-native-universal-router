@@ -16,8 +16,8 @@
     "url": "https://github.com/archer56/react-native-universal-router/issues"
   },
   "homepage": "https://github.com/archer56/react-native-universal-router#readme",
-  "dependencies": {
-    "react": "^15.4.1",
-    "react-native": "^0.42.0"
+  "peerDependencies": {
+    "react": "15.4.1",
+    "react-native": "0.42.0"
   }
 }
