@@ -1,6 +1,6 @@
 {
   "name": "react-native-universal-router",
-  "version": "0.0.2-alpha.1",
+  "version": "1.0.0",
   "description": "React-Native router for Ios, Android and UWP",
   "main": "./index.js",
   "scripts": {
@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/archer56/react-native-universal-router#readme",
   "dependencies": {
-    "react": "^15.4.2",
-    "react-native": "^0.39.1"
+    "react": "^15.4.1",
+    "react-native": "^0.42.0"
   }
 }

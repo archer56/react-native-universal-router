@@ -7,20 +7,16 @@
  *
  */
 
-import React, { PureComponent, PropTypes } from 'react';
-import {View} from 'react-native';
+import React, {Component} from 'react';
 
-export default class Route extends PureComponent{
+export default class Route extends Component {
     render() {
+        console.log(this.props);
+        const {routeComponent, title, routerActions} = this.props;
+        if(!routeComponent) return null;
+
         return (
-            <View>
-                <this.props.component />
-            </View>
+            <this.props.routeComponent title={title} routerActions={routerActions}/>
         )
     }
 }
-
-Route.propTypes = {
-    path: PropTypes.string.isRequired,
-    component: PropTypes.func.isRequired
-};
